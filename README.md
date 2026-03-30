@@ -17,7 +17,7 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 
 ## Quickstart
 
-### MCP (Claude Desktop / Cursor)
+### MCP (Claude Desktop, Cursor, Cline, Goose, and any MCP-compatible client)
 
 **1. Get an API key**
 
@@ -42,11 +42,16 @@ Create a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/a
 Config file locations:
 - **Claude Desktop (Mac):** `~/Library/Application Support/Claude/claude_desktop_config.json`
 - **Claude Desktop (Windows):** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Claude Code:** `~/.claude/settings.json` (under `mcpServers`)
 - **Cursor:** `.cursor/mcp.json` in your project root
+- **Windsurf:** `~/.codeium/windsurf/mcp_config.json`
+- **Cline / Roo Code:** MCP settings panel in VS Code extension
+- **Goose:** `~/.config/goose/config.yaml` (under `extensions`)
+- **Other clients:** refer to your client's MCP documentation
 
-**3. Ask Claude to run a debate**
+**3. Ask your AI assistant to run a debate**
 
-Claude reads the tool description to decide when to call it — no exact phrasing required. Any of these work:
+MCP clients read the tool description to decide when to call it — no exact phrasing required. Any of these work:
 
 > *"debate whether we should rewrite our backend in Go"*
 > *"use DT — should we raise our Series A now?"*
