@@ -46,12 +46,15 @@ Config file locations:
 
 **3. Ask Claude to run a debate**
 
-Any of these trigger it:
+Claude reads the tool description to decide when to call it — no exact phrasing required. Any of these work:
 
 > *"debate whether we should rewrite our backend in Go"*
-> *"use dt — should we raise our Series A now?"*
+> *"use DT — should we raise our Series A now?"*
 > *"multi-model this: is Rust worth learning in 2026?"*
-> *"get me a second opinion on moving to microservices"*
+> *"stress-test this architecture decision"*
+> *"get a second opinion on moving to microservices"*
+
+Claude will also invoke it proactively for high-stakes decisions where a single AI answer is insufficient.
 
 ---
 

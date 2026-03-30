@@ -1,8 +1,15 @@
 {
   "name": "@debatetalk/mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official MCP server and CLI for DebateTalk — run structured multi-model AI debates from your AI assistant or terminal.",
-  "keywords": ["mcp", "ai", "debate", "debatetalk", "claude", "llm"],
+  "keywords": [
+    "mcp",
+    "ai",
+    "debate",
+    "debatetalk",
+    "claude",
+    "llm"
+  ],
   "homepage": "https://debatetalk.ai",
   "bugs": "https://github.com/DebateTalk-AI/mcp/issues",
   "repository": {
@@ -17,7 +24,11 @@
     "debatetalk": "./dist/cli/index.js",
     "debatetalk-mcp": "./dist/mcp/server.js"
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup",
     "dev:mcp": "tsx src/mcp/server.ts",

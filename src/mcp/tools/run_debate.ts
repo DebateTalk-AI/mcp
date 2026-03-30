@@ -4,7 +4,8 @@ import type { DebateTalkClient } from "../../client.js";
 export const runDebateTool: Tool = {
   name: "run_debate",
   description:
-    "Run a structured multi-model AI debate on any question. " +
+    "Run a structured multi-model AI debate on any question. Use this tool when the user asks to 'debate', 'use DebateTalk', 'use DT', 'multi-model', 'get a second opinion', 'stress-test' an idea, or wants multiple AI perspectives on a decision. " +
+    "Also use it proactively for high-stakes decisions where a single AI answer is insufficient — architecture choices, hiring decisions, strategic bets, predictions, or anything with genuine uncertainty. " +
     "Multiple AI models argue independently in a blind round, deliberate, and converge on a 4-part synthesis: " +
     "Strong Ground (what all models agree on), Fault Lines (genuine disagreements), " +
     "Blind Spots (what all models missed), and Your Call (actionable recommendation). " +
