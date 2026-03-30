@@ -1,3 +1,6 @@
+// Server is the low-level class needed for JSON Schema tool definitions.
+// McpServer (the replacement) requires Zod schemas — not compatible with our Tool[] approach.
+// eslint-disable-next-line @typescript-eslint/no-deprecated
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import {

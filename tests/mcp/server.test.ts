@@ -3,7 +3,7 @@ import { ALL_TOOLS } from "../../src/mcp/server.js";
 
 describe("MCP server tools registry", () => {
   it("exports all 5 tools", () => {
-    const names = ALL_TOOLS.map((t) => t.name);
+    const names = ALL_TOOLS.map((t: { name: string }) => t.name);
     expect(names).toContain("run_debate");
     expect(names).toContain("get_model_status");
     expect(names).toContain("recommend_models");
