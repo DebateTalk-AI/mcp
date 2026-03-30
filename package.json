@@ -22,7 +22,8 @@
   "main": "./dist/mcp/server.js",
   "bin": {
     "debatetalk": "./dist/cli/index.js",
-    "debatetalk-mcp": "./dist/mcp/server.js"
+    "debatetalk-mcp": "./dist/mcp/server.js",
+    "mcp": "./dist/mcp/server.js"
   },
   "files": [
     "dist",
