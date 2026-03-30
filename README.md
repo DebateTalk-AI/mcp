@@ -17,15 +17,21 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 
 ## Quickstart
 
-### Claude Code — one-command install
+### Claude Code — plugin marketplace
 
-If you use Claude Code, install directly from the marketplace:
+**1. Add the DebateTalk marketplace:**
 
 ```
-/plugin install DebateTalk-AI/mcp
+/plugin marketplace add DebateTalk-AI/mcp
 ```
 
-Then set your API key:
+**2. Install the plugin:**
+
+```
+/plugin install debatetalk@DebateTalk-AI/mcp
+```
+
+**3. Set your API key:**
 
 ```
 /plugin config debatetalk DEBATETALK_API_KEY=dt_your_key_here
