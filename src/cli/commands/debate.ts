@@ -22,8 +22,8 @@ export function debateCommand(): Command {
         const client = new DebateTalkClient();
         const params = {
           question,
-          models: opts.models?.split(",").map((s) => s.trim()),
-          rounds: opts.rounds ? parseInt(opts.rounds, 10) : undefined,
+          ...(opts.models && { models: opts.models.split(",").map((s) => s.trim()) }),
+          ...(opts.rounds && { rounds: parseInt(opts.rounds, 10) }),
         };
 
         const spinner = ora("Starting debate…").start();
