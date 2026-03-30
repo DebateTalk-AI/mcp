@@ -1,6 +1,6 @@
 {
   "name": "@debatetalk/mcp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Official MCP server and CLI for DebateTalk — run structured multi-model AI debates from your AI assistant or terminal.",
   "keywords": [
     "mcp",
