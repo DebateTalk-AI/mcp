@@ -30,7 +30,7 @@ Create a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/a
   "mcpServers": {
     "debatetalk": {
       "command": "npx",
-      "args": ["-y", "debatetalk-mcp"],
+      "args": ["-y", "@debatetalk/mcp"],
       "env": {
         "DEBATETALK_API_KEY": "dt_your_key_here"
       }
@@ -55,7 +55,7 @@ Config file locations:
 Install globally:
 
 ```bash
-npm install -g debatetalk-mcp
+npm install -g @debatetalk/mcp
 ```
 
 Set your API key:
