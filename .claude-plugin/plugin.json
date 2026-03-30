@@ -8,7 +8,9 @@
   },
   "userConfig": {
     "DEBATETALK_API_KEY": {
+      "title": "DebateTalk API Key",
       "description": "Your DebateTalk API key from console.debatetalk.ai/api-keys",
+      "type": "string",
       "sensitive": true
     }
   }
