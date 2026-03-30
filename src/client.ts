@@ -9,6 +9,7 @@ import type {
   DebateEvent,
   DebateResult,
   ApiErrorBody,
+  SynthesisData,
 } from "./types.js";
 
 const BASE_URL = "https://engine.debatetalk.ai";
@@ -57,7 +58,7 @@ export class DebateTalkClient {
     const res = await fetch(`${BASE_URL}${path}`, {
       method,
       headers: this.baseHeaders,
-      body: body !== undefined ? JSON.stringify(body) : undefined,
+      ...(body !== undefined && { body: JSON.stringify(body) }),
     });
 
     if (!res.ok) {
@@ -128,7 +129,6 @@ export class DebateTalkClient {
       .pipeThrough(new EventSourceParserStream());
 
     for await (const event of stream) {
-      if (event.type !== "event") continue;
       if (!event.data || event.data === "[DONE]") continue;
       try {
         yield JSON.parse(event.data) as DebateEvent;
@@ -143,7 +143,7 @@ export class DebateTalkClient {
     let debateId = "";
     let questionType = "";
     let models: string[] = [];
-    let synthesis = null;
+    let synthesis: SynthesisData | null = null;
 
     for await (const event of this.streamDebate(params)) {
       events.push(event);
@@ -157,7 +157,7 @@ export class DebateTalkClient {
           (event.data["question_type"] as string | undefined) ?? "";
       }
       if (event.type === "synthesis") {
-        synthesis = event.data as typeof synthesis;
+        synthesis = event.data as unknown as SynthesisData;
       }
     }
 
