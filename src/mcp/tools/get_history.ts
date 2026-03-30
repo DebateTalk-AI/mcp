@@ -1,0 +1,63 @@
+import type { Tool } from "@modelcontextprotocol/sdk/types.js";
+import type { DebateTalkClient } from "../../client.js";
+
+export const getHistoryTool: Tool = {
+  name: "get_history",
+  description:
+    "Retrieve your past DebateTalk debates. " +
+    "Returns debate titles, dates, model counts, and share links. " +
+    "Requires an API key (Pro or Enterprise plan).",
+  inputSchema: {
+    type: "object",
+    properties: {
+      limit: {
+        type: "number",
+        description: "Number of debates to return (default: 20, max: 100)",
+      },
+    },
+  },
+};
+
+export async function handleGetHistory(
+  client: DebateTalkClient,
+  args: { limit?: number }
+) {
+  const limit = args.limit ?? 20;
+  const { debates, total } = await client.getHistory(limit);
+
+  if (debates.length === 0) {
+    return {
+      content: [
+        {
+          type: "text" as const,
+          text: "No debates found. Run your first debate at https://console.debatetalk.ai",
+        },
+      ],
+    };
+  }
+
+  const rows = debates.map((d) => {
+    const date = new Date(d.created_at).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+    const shareLink = d.share_token
+      ? ` — https://console.debatetalk.ai/share/${d.share_token}`
+      : "";
+    return `• [${date}] ${d.title} (${d.model_count} models, ${d.status})${shareLink}`;
+  });
+
+  return {
+    content: [
+      {
+        type: "text" as const,
+        text: [
+          `Debate history — showing ${debates.length} of ${total}`,
+          ``,
+          ...rows,
+        ].join("\n"),
+      },
+    ],
+  };
+}
