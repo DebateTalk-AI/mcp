@@ -52,8 +52,15 @@ Config file locations:
 
 ### CLI
 
+Install globally:
+
 ```bash
 npm install -g debatetalk-mcp
+```
+
+Set your API key:
+
+```bash
 export DEBATETALK_API_KEY=dt_your_key_here
 ```
 
