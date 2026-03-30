@@ -1,10 +1,13 @@
 {
-  "name": "DebateTalk-AI/mcp",
+  "name": "debatetalk-mcp",
   "owner": { "name": "DebateTalk AI" },
   "plugins": [
     {
       "name": "debatetalk",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "DebateTalk-AI/mcp"
+      },
       "description": "Run structured multi-model AI debates from your AI assistant."
     }
   ]

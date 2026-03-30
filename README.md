@@ -28,7 +28,7 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 **2. Install the plugin:**
 
 ```
-/plugin install debatetalk@DebateTalk-AI/mcp
+/plugin install debatetalk@debatetalk-mcp
 ```
 
 **3. Set your API key:**
