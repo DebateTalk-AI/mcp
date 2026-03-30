@@ -1,7 +1,7 @@
 {
   "name": "debatetalk",
   "description": "Run structured multi-model AI debates from your AI assistant. Multiple models argue independently, deliberate, and converge on a 4-part synthesis: Strong Ground, Fault Lines, Blind Spots, and Your Call.",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "author": {
     "name": "DebateTalk",
     "email": "support@debatetalk.ai"
