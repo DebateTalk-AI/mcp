@@ -46,7 +46,12 @@ Config file locations:
 
 **3. Ask Claude to run a debate**
 
-> *"Use DebateTalk to debate whether we should rewrite our backend in Go."*
+Any of these trigger it:
+
+> *"debate whether we should rewrite our backend in Go"*
+> *"use dt — should we raise our Series A now?"*
+> *"multi-model this: is Rust worth learning in 2026?"*
+> *"get me a second opinion on moving to microservices"*
 
 ---
 
