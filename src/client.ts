@@ -149,15 +149,22 @@ export class DebateTalkClient {
       events.push(event);
 
       if (event.type === "debate_start") {
-        debateId = (event.data["debate_id"] as string | undefined) ?? "";
-        models = (event.data["models"] as string[] | undefined) ?? [];
+        debateId = typeof event.data["debate_id"] === "string" ? event.data["debate_id"] : "";
+        models = Array.isArray(event.data["models"]) ? (event.data["models"] as string[]) : [];
       }
       if (event.type === "classification") {
-        questionType =
-          (event.data["question_type"] as string | undefined) ?? "";
+        questionType = typeof event.data["question_type"] === "string" ? event.data["question_type"] : "";
       }
       if (event.type === "synthesis") {
-        synthesis = event.data as unknown as SynthesisData;
+        const d = event.data;
+        if (
+          typeof d["strong_ground"] === "string" &&
+          typeof d["fault_lines"] === "string" &&
+          typeof d["blind_spots"] === "string" &&
+          typeof d["your_call"] === "string"
+        ) {
+          synthesis = d as unknown as SynthesisData;
+        }
       }
     }
 

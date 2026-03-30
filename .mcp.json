@@ -1,0 +1,9 @@
+{
+  "debatetalk": {
+    "command": "npx",
+    "args": ["-y", "@debatetalk/mcp"],
+    "env": {
+      "DEBATETALK_API_KEY": "dt_your_key_here"
+    }
+  }
+}

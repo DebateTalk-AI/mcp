@@ -20,8 +20,7 @@ export type DebateEventType =
 
 export interface DebateEvent {
   type: DebateEventType;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
 
 export interface SynthesisData {

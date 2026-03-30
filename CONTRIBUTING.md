@@ -6,7 +6,7 @@ Thank you for your interest in contributing!
 
 ```bash
 git clone https://github.com/DebateTalk-AI/mcp
-cd debatetalk-mcp
+cd mcp
 npm install
 cp .env.example .env
 # Add your DEBATETALK_API_KEY to .env

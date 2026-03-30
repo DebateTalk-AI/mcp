@@ -46,6 +46,6 @@ describe("run_debate tool", () => {
     } as unknown as DebateTalkClient;
 
     const result = await handleRunDebate(client, { question: "test" });
-    expect(result.content[0]?.text).toContain("debate completed");
+    expect(result.content[0]?.text).toContain("completed but synthesis was not produced");
   });
 });

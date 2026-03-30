@@ -41,11 +41,12 @@ export async function handleRunDebate(
   const result = await client.runDebate(args);
 
   if (!result.synthesis) {
+    const id = result.debate_id ? `Debate ${result.debate_id}` : "Debate";
     return {
       content: [
         {
           type: "text" as const,
-          text: `debate completed — ${result.debate_id} — but synthesis was not produced. Check your plan limits at https://console.debatetalk.ai`,
+          text: `${id} completed but synthesis was not produced. Check your plan limits at https://console.debatetalk.ai`,
         },
       ],
     };

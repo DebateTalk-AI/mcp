@@ -11,8 +11,6 @@
     "noImplicitOverride": true,
     "exactOptionalPropertyTypes": true,
     "skipLibCheck": true,
-    "declaration": true,
-    "declarationMap": true,
     "sourceMap": true
   },
   "include": ["src/**/*"],

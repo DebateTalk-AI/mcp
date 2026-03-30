@@ -1,6 +1,6 @@
 {
   "name": "@debatetalk/mcp",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Official MCP server and CLI for DebateTalk — run structured multi-model AI debates from your AI assistant or terminal.",
   "keywords": [
     "mcp",
@@ -27,7 +27,9 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    ".mcp.json",
+    ".claude-plugin"
   ],
   "scripts": {
     "build": "tsup",
