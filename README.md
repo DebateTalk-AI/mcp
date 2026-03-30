@@ -1,6 +1,6 @@
 # DebateTalk MCP
 
-> Official MCP server and CLI for [DebateTalk](https://dt.ai) — run structured multi-model AI debates from your AI assistant or terminal.
+> Official MCP server and CLI for [DebateTalk](https://debatetalk.ai) — run structured multi-model AI debates from your AI assistant or terminal.
 
 DebateTalk makes multiple AI models argue a question independently, challenge each other's reasoning, and converge on a structured synthesis: **Strong Ground, Fault Lines, Blind Spots, and Your Call.**
 
@@ -28,17 +28,17 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 **2. Install the plugin:**
 
 ```
-/plugin install dt@dt-mcp
+/plugin install debatetalk@debatetalk-mcp
 ```
 
 **3. Set your API key:**
 
-Get a key at [console.dt.ai/api-keys](https://console.dt.ai/api-keys), then add it to `~/.claude/settings.json`:
+Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys), then add it to `~/.claude/settings.json`:
 
 ```json
 {
   "pluginConfigs": {
-    "dt@dt-mcp": {
+    "debatetalk@debatetalk-mcp": {
       "options": {
         "api_key": "dt_your_key_here"
       }
@@ -55,7 +55,7 @@ Then run `/reload-plugins` — the five DebateTalk tools are immediately availab
 
 **1. Get an API key**
 
-Create a key at [console.dt.ai/api-keys](https://console.dt.ai/api-keys). Requires a Pro or Enterprise plan. Free tier: 5 debates/day.
+Create a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Requires a Pro or Enterprise plan. Free tier: 5 debates/day.
 
 **2. Add to your MCP client config**
 
@@ -64,7 +64,7 @@ Create a key at [console.dt.ai/api-keys](https://console.dt.ai/api-keys). Requir
   "mcpServers": {
     "dt": {
       "command": "npx",
-      "args": ["-y", "@dt/mcp"],
+      "args": ["-y", "@debatetalk/mcp"],
       "env": {
         "DEBATETALK_API_KEY": "dt_your_key_here"
       }
@@ -102,7 +102,7 @@ Claude will also invoke it proactively for high-stakes decisions where a single 
 Install globally:
 
 ```bash
-npm install -g @dt/mcp
+npm install -g @debatetalk/mcp
 ```
 
 Set your API key:
@@ -187,7 +187,7 @@ limit        number   optional   Number of debates to return (default: 20, max: 
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `DEBATETALK_API_KEY` | For authenticated tools | Your API key from console.dt.ai |
+| `DEBATETALK_API_KEY` | For authenticated tools | Your API key from console.debatetalk.ai |
 
 Public tools (`get_model_status`, `recommend_models`) work without an API key.
 
@@ -201,7 +201,7 @@ Public tools (`get_model_status`, `recommend_models`) work without an API key.
 | Pro | Unlimited | 2 | 5 |
 | Enterprise | Unlimited | Unlimited | 10 |
 
-[Full pricing →](https://dt.ai/resources/plans-and-limits)
+[Full pricing →](https://debatetalk.ai/resources/plans-and-limits)
 
 ---
 
@@ -209,7 +209,7 @@ Public tools (`get_model_status`, `recommend_models`) work without an API key.
 
 ```bash
 git clone https://github.com/DebateTalk-AI/mcp
-cd dt-mcp
+cd mcp
 npm install
 npm run build
 npm test
