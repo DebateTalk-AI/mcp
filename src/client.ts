@@ -29,7 +29,7 @@ export class DebateTalkClient {
   private readonly apiKey: string | undefined;
 
   constructor(apiKey?: string) {
-    this.apiKey = apiKey ?? process.env["DEBATETALK_API_KEY"];
+    this.apiKey = apiKey ?? process.env["CLAUDE_PLUGIN_OPTION_DEBATETALK_API_KEY"] ?? process.env["DEBATETALK_API_KEY"];
   }
 
   private get authHeaders(): Record<string, string> {
