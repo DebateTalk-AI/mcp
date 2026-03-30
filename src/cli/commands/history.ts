@@ -15,7 +15,7 @@ export function historyCommand(): Command {
           Number.isNaN(rawLimit) ? 20 : Math.min(Math.max(1, rawLimit), 100)
         );
         if (debates.length === 0) {
-          console.log(chalk.dim('No debates yet. Run: debatetalk debate "your question"'));
+          console.log(chalk.dim('No debates yet. Run: dt debate "your question"'));
           return;
         }
         console.log(

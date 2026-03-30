@@ -8,7 +8,7 @@ import { historyCommand } from "./commands/history.js";
 const program = new Command();
 
 program
-  .name("debatetalk")
+  .name("dt")
   .description(
     "DebateTalk CLI — run structured multi-model AI debates from your terminal.\n" +
       "Docs: https://debatetalk.ai/resources/api-reference"
