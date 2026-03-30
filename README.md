@@ -31,9 +31,23 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 /plugin install debatetalk@debatetalk-mcp
 ```
 
-Claude Code will prompt you for your API key during installation. Get one at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys).
+**3. Set your API key:**
 
-The five DebateTalk tools are immediately available in your session once installed.
+Add your API key to `~/.claude/settings.json`:
+
+```json
+{
+  "pluginConfigs": {
+    "debatetalk@debatetalk-mcp": {
+      "options": {
+        "DEBATETALK_API_KEY": "dt_your_key_here"
+      }
+    }
+  }
+}
+```
+
+Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Then run `/reload-plugins` — the five DebateTalk tools are immediately available in your session.
 
 ---
 
