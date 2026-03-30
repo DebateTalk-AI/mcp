@@ -4,10 +4,10 @@
   "description": "Official MCP server and CLI for DebateTalk — run structured multi-model AI debates from your AI assistant or terminal.",
   "keywords": ["mcp", "ai", "debate", "debatetalk", "claude", "llm"],
   "homepage": "https://debatetalk.ai",
-  "bugs": "https://github.com/debatetalk/debatetalk-mcp/issues",
+  "bugs": "https://github.com/DebateTalk-AI/mcp/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/debatetalk/debatetalk-mcp.git"
+    "url": "https://github.com/DebateTalk-AI/mcp.git"
   },
   "license": "MIT",
   "author": "DebateTalk <support@debatetalk.ai>",

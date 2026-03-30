@@ -5,7 +5,7 @@ Thank you for your interest in contributing!
 ## Development setup
 
 ```bash
-git clone https://github.com/debatetalk/debatetalk-mcp
+git clone https://github.com/DebateTalk-AI/mcp
 cd debatetalk-mcp
 npm install
 cp .env.example .env
@@ -48,4 +48,4 @@ All new tools must have corresponding tests in `tests/`.
 
 ## Reporting issues
 
-Open an issue at https://github.com/debatetalk/debatetalk-mcp/issues
+Open an issue at https://github.com/DebateTalk-AI/mcp/issues

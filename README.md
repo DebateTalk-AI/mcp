@@ -154,7 +154,7 @@ Public tools (`get_model_status`, `recommend_models`) work without an API key.
 ## Development
 
 ```bash
-git clone https://github.com/debatetalk/debatetalk-mcp
+git clone https://github.com/DebateTalk-AI/mcp
 cd debatetalk-mcp
 npm install
 npm run build
