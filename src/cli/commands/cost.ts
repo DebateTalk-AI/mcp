@@ -7,13 +7,13 @@ export function costCommand(): Command {
   return new Command("cost")
     .description("Estimate the credit cost of a debate before running it")
     .argument("<question>", "The question to estimate cost for")
-    .option("--rounds <n>", "Number of deliberation rounds", "2")
-    .action(async (question: string, opts: { rounds: string }) => {
+    .option("--rounds <n>", "Number of deliberation rounds")
+    .action(async (question: string, opts: { rounds?: string }) => {
       const client = new DebateTalkClient();
       try {
         const est = await client.estimateCost({
           question,
-          rounds: parseInt(opts.rounds, 10),
+          ...(opts.rounds && { rounds: parseInt(opts.rounds, 10) }),
         });
         console.log(chalk.bold(`Cost estimate`));
         console.log();

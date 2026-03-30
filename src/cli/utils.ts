@@ -24,14 +24,3 @@ export function handleError(err: unknown): never {
   process.exit(1);
 }
 
-export function requireApiKey(): string {
-  const key = process.env["DEBATETALK_API_KEY"];
-  if (!key) {
-    console.error(chalk.red("DEBATETALK_API_KEY is not set."));
-    console.error(
-      chalk.dim("Create a key at https://console.debatetalk.ai/api-keys")
-    );
-    process.exit(1);
-  }
-  return key;
-}

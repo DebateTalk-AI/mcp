@@ -22,7 +22,8 @@ export async function handleGetHistory(
   client: DebateTalkClient,
   args: { limit?: number }
 ) {
-  const limit = args.limit ?? 20;
+  const raw = args.limit ?? 20;
+  const limit = Number.isFinite(raw) ? Math.min(Math.max(1, raw), 100) : 20;
   const { debates, total } = await client.getHistory(limit);
 
   if (debates.length === 0) {

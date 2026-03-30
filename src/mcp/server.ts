@@ -61,8 +61,10 @@ async function main() {
   await server.connect(transport);
 }
 
-// Only start the server when run directly, not when imported in tests
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Only start the server when run directly, not when imported in tests.
+// fileURLToPath handles Windows drive letter differences vs process.argv[1].
+import { fileURLToPath } from "url";
+if (fileURLToPath(import.meta.url) === process.argv[1]) {
   main().catch((err: unknown) => {
     process.stderr.write(
       `DebateTalk MCP server error: ${err instanceof Error ? err.message : String(err)}\n`
