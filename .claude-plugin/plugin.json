@@ -13,5 +13,14 @@
       "type": "string",
       "sensitive": true
     }
+  },
+  "mcpServers": {
+    "debatetalk-mcp": {
+      "command": "npx",
+      "args": ["-y", "@debatetalk/mcp"],
+      "env": {
+        "DEBATETALK_API_KEY": "${user_config.DEBATETALK_API_KEY}"
+      }
+    }
   }
 }
