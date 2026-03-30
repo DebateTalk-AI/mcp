@@ -1,0 +1,47 @@
+{
+  "name": "debatetalk-mcp",
+  "version": "1.0.0",
+  "description": "Official MCP server and CLI for DebateTalk — run structured multi-model AI debates from your AI assistant or terminal.",
+  "keywords": ["mcp", "ai", "debate", "debatetalk", "claude", "llm"],
+  "homepage": "https://debatetalk.ai",
+  "bugs": "https://github.com/debatetalk/debatetalk-mcp/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/debatetalk/debatetalk-mcp.git"
+  },
+  "license": "MIT",
+  "author": "DebateTalk <support@debatetalk.ai>",
+  "type": "module",
+  "main": "./dist/mcp/server.js",
+  "bin": {
+    "debatetalk": "./dist/cli/index.js",
+    "debatetalk-mcp": "./dist/mcp/server.js"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "dev:mcp": "tsx src/mcp/server.ts",
+    "dev:cli": "tsx src/cli/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "eventsource-parser": "^3.0.0",
+    "ora": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
