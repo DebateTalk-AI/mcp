@@ -1,7 +1,7 @@
 {
   "name": "debatetalk",
   "description": "Run structured multi-model AI debates from your AI assistant. Multiple models argue independently, deliberate, and converge on a 4-part synthesis: Strong Ground, Fault Lines, Blind Spots, and Your Call.",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "author": {
     "name": "DebateTalk",
     "email": "support@debatetalk.ai"
@@ -11,7 +11,7 @@
       "title": "DebateTalk API Key",
       "description": "Your DebateTalk API key from console.debatetalk.ai/api-keys",
       "type": "string",
-      "sensitive": true
+      "sensitive": false
     }
   },
   "mcpServers": {
