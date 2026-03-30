@@ -5,5 +5,11 @@
   "author": {
     "name": "DebateTalk",
     "email": "support@debatetalk.ai"
+  },
+  "userConfig": {
+    "DEBATETALK_API_KEY": {
+      "description": "Your DebateTalk API key from console.debatetalk.ai/api-keys",
+      "sensitive": true
+    }
   }
 }
