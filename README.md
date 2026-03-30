@@ -33,21 +33,21 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 
 **3. Set your API key:**
 
-Add your API key to `~/.claude/settings.json`:
+Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys), then add it to `~/.claude/settings.json`:
 
 ```json
 {
   "pluginConfigs": {
     "debatetalk@debatetalk-mcp": {
       "options": {
-        "DEBATETALK_API_KEY": "dt_your_key_here"
+        "api_key": "dt_your_key_here"
       }
     }
   }
 }
 ```
 
-Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Then run `/reload-plugins` — the five DebateTalk tools are immediately available in your session.
+Then run `/reload-plugins` — the five DebateTalk tools are immediately available in your session.
 
 ---
 
