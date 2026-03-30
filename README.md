@@ -17,6 +17,24 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 
 ## Quickstart
 
+### Claude Code — one-command install
+
+If you use Claude Code, install directly from the marketplace:
+
+```
+/plugin install DebateTalk-AI/mcp
+```
+
+Then set your API key:
+
+```
+/plugin config debatetalk DEBATETALK_API_KEY=dt_your_key_here
+```
+
+The five DebateTalk tools are immediately available in your session — no config file editing required.
+
+---
+
 ### MCP (Claude Desktop, Cursor, Cline, Goose, and any MCP-compatible client)
 
 **1. Get an API key**
