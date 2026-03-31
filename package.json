@@ -8,7 +8,15 @@
     "debate",
     "debatetalk",
     "claude",
-    "llm"
+    "llm",
+    "multi-model",
+    "consensus",
+    "deliberation",
+    "model-council",
+    "multi-llm",
+    "structured-output",
+    "ai-council",
+    "model-comparison"
   ],
   "homepage": "https://debatetalk.ai",
   "bugs": "https://github.com/DebateTalk-AI/mcp/issues",

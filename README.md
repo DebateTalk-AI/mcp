@@ -1,8 +1,18 @@
 # DebateTalk MCP
 
+[![npm version](https://img.shields.io/npm/v/@debatetalk/mcp.svg)](https://www.npmjs.com/package/@debatetalk/mcp)
+[![npm downloads](https://img.shields.io/npm/dm/@debatetalk/mcp.svg)](https://www.npmjs.com/package/@debatetalk/mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 > Official MCP server and CLI for [DebateTalk](https://debatetalk.ai) — run structured multi-model AI debates from your AI assistant or terminal.
 
 DebateTalk makes multiple AI models argue a question independently, challenge each other's reasoning, and converge on a structured synthesis: **Strong Ground, Fault Lines, Blind Spots, and Your Call.**
+
+---
+
+## Demo
+
+> Video walkthrough coming soon
 
 ---
 
@@ -13,6 +23,8 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 - **Streaming progress** — real-time round-by-round updates via MCP logging notifications
 - **Cost & share links** — every debate shows cost and a shareable URL
 - **5 tools:** `run_debate`, `get_model_status`, `recommend_models`, `estimate_cost`, `get_history`
+
+> **Try without an API key** — `dt models` and `dt recommend` work instantly, no signup needed. See which models are online and get a recommended panel for your question before committing to a plan.
 
 ---
 
@@ -96,6 +108,18 @@ MCP clients read the tool description to decide when to call it — no exact phr
 
 Claude will also invoke it proactively for high-stakes decisions where a single AI answer is insufficient.
 
+**Example — Cursor:**
+
+Ask Cursor's AI chat: *"use the run_debate tool — should we switch from REST to GraphQL?"*
+
+Cursor calls the MCP tool, streams progress, and returns the full synthesis inline in your chat.
+
+**Example — Cline (VS Code):**
+
+In Cline's agent chat: *"debate: is our current auth middleware secure enough for SOC 2?"*
+
+Cline detects the `run_debate` tool from the MCP server and runs the debate. Results appear in the Cline output panel.
+
 ---
 
 ### CLI
@@ -115,6 +139,38 @@ export DEBATETALK_API_KEY=dt_your_key_here
 **Run a debate:**
 ```bash
 dt debate "Should we adopt microservices?"
+```
+
+Example output:
+
+```
+- Starting debate…
+✔ Debate complete
+
+"Should we adopt microservices?"
+Cost: $0.0842
+
+━━━ STRONG GROUND ━━━
+1. Microservices suit orgs with 50+ engineers and distinct team boundaries
+2. Monoliths are simpler to operate at small scale
+3. Migration costs are consistently underestimated
+
+━━━ FAULT LINES ━━━
+1. If teams need independent deploy cycles, then microservices — otherwise monolith
+2. If operational maturity is low, then monolith — otherwise microservices are viable
+3. If data consistency is critical, then monolith avoids distributed transaction pain
+
+━━━ BLIND SPOTS ━━━
+1. Cost of distributed tracing and observability tooling
+2. Team cognitive load increases with service count
+3. Shared database patterns can bridge the gap
+
+━━━ YOUR CALL ━━━
+1. Do you have dedicated platform engineering?
+2. Are teams already blocked on shared deploy cycles?
+3. Can you afford 6+ months of migration investment?
+
+🔗 https://console.debatetalk.ai/share/a1b2c3d4-5678-90ab-cdef-1234567890ab
 ```
 
 **Check which models are online:**
