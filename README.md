@@ -250,18 +250,6 @@ Public tools (`get_model_status`, `recommend_models`) work without an API key.
 
 ---
 
-## Plans & Limits
-
-| Plan | Debates/day | API keys | Debaters |
-|------|-------------|----------|---------|
-| Free | 5 | — | 3 |
-| Pro | Unlimited | 2 | 5 |
-| Enterprise | Unlimited | Unlimited | 10 |
-
-[Full pricing →](https://debatetalk.ai/resources/plans-and-limits)
-
----
-
 ## Development
 
 ```bash
