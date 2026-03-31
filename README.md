@@ -42,7 +42,7 @@ This gives you the `dt` CLI and the MCP server.
 export DEBATETALK_API_KEY=dt_your_key_here
 ```
 
-Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Free tier: 5 debates/day.
+Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys).
 
 ---
 
@@ -236,38 +236,6 @@ rounds       number   optional
 
 ```
 limit        number   optional   Number of debates to return (default: 20, max: 100)
-```
-
----
-
-## Configuration
-
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `DEBATETALK_API_KEY` | For authenticated tools | Your API key from console.debatetalk.ai |
-
-Public tools (`get_model_status`, `recommend_models`) work without an API key.
-
----
-
-## Development
-
-```bash
-git clone https://github.com/DebateTalk-AI/mcp
-cd mcp
-npm install
-npm run build
-npm test
-```
-
-**Run MCP server locally:**
-```bash
-DEBATETALK_API_KEY=dt_your_key npm run dev:mcp
-```
-
-**Run CLI locally:**
-```bash
-DEBATETALK_API_KEY=dt_your_key npm run dev:cli -- debate "your question"
 ```
 
 ---
