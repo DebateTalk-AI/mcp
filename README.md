@@ -28,113 +28,25 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 
 ---
 
-## Quickstart
-
-### Claude Code — plugin marketplace
-
-**1. Add the DebateTalk marketplace:**
-
-```
-/plugin marketplace add DebateTalk-AI/mcp
-```
-
-**2. Install the plugin:**
-
-```
-/plugin install debatetalk@debatetalk-mcp
-```
-
-**3. Set your API key:**
-
-Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys), then add it to `~/.claude/settings.json`:
-
-```json
-{
-  "pluginConfigs": {
-    "debatetalk@debatetalk-mcp": {
-      "options": {
-        "api_key": "dt_your_key_here"
-      }
-    }
-  }
-}
-```
-
-Then run `/reload-plugins` — the five DebateTalk tools are immediately available in your session.
-
----
-
-### MCP (Claude Desktop, Cursor, Cline, Goose, and any MCP-compatible client)
-
-**1. Get an API key**
-
-Create a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Requires a Pro or Enterprise plan. Free tier: 5 debates/day.
-
-**2. Add to your MCP client config**
-
-```json
-{
-  "mcpServers": {
-    "dt": {
-      "command": "npx",
-      "args": ["-y", "@debatetalk/mcp"],
-      "env": {
-        "DEBATETALK_API_KEY": "dt_your_key_here"
-      }
-    }
-  }
-}
-```
-
-Config file locations:
-- **Claude Desktop (Mac):** `~/Library/Application Support/Claude/claude_desktop_config.json`
-- **Claude Desktop (Windows):** `%APPDATA%\Claude\claude_desktop_config.json`
-- **Claude Code:** `~/.claude/settings.json` (under `mcpServers`)
-- **Cursor:** `.cursor/mcp.json` in your project root
-- **Windsurf:** `~/.codeium/windsurf/mcp_config.json`
-- **Cline / Roo Code:** MCP settings panel in VS Code extension
-- **Goose:** `~/.config/goose/config.yaml` (under `extensions`)
-- **Other clients:** refer to your client's MCP documentation
-
-**3. Ask your AI assistant to run a debate**
-
-MCP clients read the tool description to decide when to call it — no exact phrasing required. Any of these work:
-
-> *"debate whether we should rewrite our backend in Go"*
-> *"use DT — should we raise our Series A now?"*
-> *"multi-model this: is Rust worth learning in 2026?"*
-> *"stress-test this architecture decision"*
-> *"get a second opinion on moving to microservices"*
-
-Claude will also invoke it proactively for high-stakes decisions where a single AI answer is insufficient.
-
-**Example — Cursor:**
-
-Ask Cursor's AI chat: *"use the run_debate tool — should we switch from REST to GraphQL?"*
-
-Cursor calls the MCP tool, streams progress, and returns the full synthesis inline in your chat.
-
-**Example — Cline (VS Code):**
-
-In Cline's agent chat: *"debate: is our current auth middleware secure enough for SOC 2?"*
-
-Cline detects the `run_debate` tool from the MCP server and runs the debate. Results appear in the Cline output panel.
-
----
-
-### CLI
-
-Install globally:
+## Install
 
 ```bash
 npm install -g @debatetalk/mcp
 ```
 
-Set your API key:
+This gives you the `dt` CLI and the MCP server.
+
+**Set your API key:**
 
 ```bash
 export DEBATETALK_API_KEY=dt_your_key_here
 ```
+
+Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Free tier: 5 debates/day.
+
+---
+
+## CLI
 
 **Run a debate:**
 ```bash
@@ -193,6 +105,94 @@ dt cost "Should we raise our Series A now?"
 dt history
 dt history --limit 5
 ```
+
+---
+
+## MCP Server (Claude Desktop, Cursor, Cline, Goose, and any MCP client)
+
+Add to your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "dt": {
+      "command": "npx",
+      "args": ["-y", "@debatetalk/mcp"],
+      "env": {
+        "DEBATETALK_API_KEY": "dt_your_key_here"
+      }
+    }
+  }
+}
+```
+
+Config file locations:
+- **Claude Desktop (Mac):** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Claude Desktop (Windows):** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Claude Code:** `~/.claude/settings.json` (under `mcpServers`)
+- **Cursor:** `.cursor/mcp.json` in your project root
+- **Windsurf:** `~/.codeium/windsurf/mcp_config.json`
+- **Cline / Roo Code:** MCP settings panel in VS Code extension
+- **Goose:** `~/.config/goose/config.yaml` (under `extensions`)
+- **Other clients:** refer to your client's MCP documentation
+
+**Ask your AI assistant to run a debate**
+
+MCP clients read the tool description to decide when to call it — no exact phrasing required. Any of these work:
+
+> *"debate whether we should rewrite our backend in Go"*
+> *"use DT — should we raise our Series A now?"*
+> *"multi-model this: is Rust worth learning in 2026?"*
+> *"stress-test this architecture decision"*
+> *"get a second opinion on moving to microservices"*
+
+Claude will also invoke it proactively for high-stakes decisions where a single AI answer is insufficient.
+
+**Example — Cursor:**
+
+Ask Cursor's AI chat: *"use the run_debate tool — should we switch from REST to GraphQL?"*
+
+Cursor calls the MCP tool, streams progress, and returns the full synthesis inline in your chat.
+
+**Example — Cline (VS Code):**
+
+In Cline's agent chat: *"debate: is our current auth middleware secure enough for SOC 2?"*
+
+Cline detects the `run_debate` tool from the MCP server and runs the debate. Results appear in the Cline output panel.
+
+---
+
+## Claude Code — plugin marketplace
+
+**1. Add the DebateTalk marketplace:**
+
+```
+/plugin marketplace add DebateTalk-AI/mcp
+```
+
+**2. Install the plugin:**
+
+```
+/plugin install debatetalk@debatetalk-mcp
+```
+
+**3. Set your API key:**
+
+Add to `~/.claude/settings.json`:
+
+```json
+{
+  "pluginConfigs": {
+    "debatetalk@debatetalk-mcp": {
+      "options": {
+        "api_key": "dt_your_key_here"
+      }
+    }
+  }
+}
+```
+
+Then run `/reload-plugins` — the five DebateTalk tools are immediately available in your session.
 
 ---
 
