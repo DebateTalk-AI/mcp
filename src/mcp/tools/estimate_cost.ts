@@ -6,7 +6,7 @@ export const estimateCostTool: Tool = {
   description:
     "Estimate the credit cost of a debate before running it. " +
     "Returns total credits, USD cost, and a per-model breakdown. " +
-    "Requires an API key (Pro or Enterprise plan).",
+    "Requires an API key (Managed or Enterprise plan).",
   inputSchema: {
     type: "object",
     properties: {
@@ -53,7 +53,7 @@ export async function handleEstimateCost(
           `Breakdown:`,
           breakdownRows,
           ``,
-          `Credits refill automatically on Pro plans. View balance at https://console.debatetalk.ai`,
+          `Credits refill automatically on Managed plans. View balance at https://console.debatetalk.ai`,
         ].join("\n"),
       },
     ],

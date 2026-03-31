@@ -6,7 +6,7 @@ export const getHistoryTool: Tool = {
   description:
     "Retrieve your past DebateTalk debates. " +
     "Returns debate titles, dates, model counts, and share links. " +
-    "Requires an API key (Pro or Enterprise plan).",
+    "Requires an API key (Managed or Enterprise plan).",
   inputSchema: {
     type: "object",
     properties: {
