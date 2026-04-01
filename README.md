@@ -42,7 +42,7 @@ This gives you the `dt` CLI and the MCP server.
 export DEBATETALK_API_KEY=dt_your_key_here
 ```
 
-Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys).
+Get a key at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys). Free accounts include 1 API key — sign up at [console.debatetalk.ai](https://console.debatetalk.ai/sign-in).
 
 ---
 

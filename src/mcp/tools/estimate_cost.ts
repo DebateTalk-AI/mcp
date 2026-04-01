@@ -6,7 +6,7 @@ export const estimateCostTool: Tool = {
   description:
     "Estimate the credit cost of a debate before running it. " +
     "Returns total credits, USD cost, and a per-model breakdown. " +
-    "Requires an API key (Managed or Enterprise plan).",
+    "Requires an API key. Get one at https://console.debatetalk.ai/api-keys.",
   inputSchema: {
     type: "object",
     properties: {
