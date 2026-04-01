@@ -11,7 +11,7 @@ export const runDebateTool: Tool = {
     "Multiple AI models argue independently in a blind round, deliberate, and converge on a 4-part synthesis: " +
     "Strong Ground (what all models agree on), Fault Lines (genuine disagreements), " +
     "Blind Spots (what all models missed), and Your Call (actionable recommendation). " +
-    "Requires an API key (Managed or Enterprise plan). Free tier: 5 debates/day.",
+    "Requires an API key. Get one at https://console.debatetalk.ai/api-keys.",
   inputSchema: {
     type: "object",
     properties: {
