@@ -6,7 +6,7 @@ export const recommendModelsTool: Tool = {
   description:
     "Get the best model panel recommended by DebateTalk smart routing for a specific question. " +
     "Returns the ideal debaters, synthesizer, and adjudicator based on the question type. " +
-    "No API key required.",
+    "Requires an API key. Get one at https://console.debatetalk.ai/api-keys.",
   inputSchema: {
     type: "object",
     properties: {

@@ -24,7 +24,7 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 - **Cost & share links** — every debate shows cost and a shareable URL
 - **5 tools:** `run_debate`, `get_model_status`, `recommend_models`, `estimate_cost`, `get_history`
 
-> **Try without an API key** — `dt models` and `dt recommend` work instantly, no signup needed. See which models are online and get a recommended panel for your question before committing to a plan.
+> **Try without an API key** — `dt models` works instantly, no signup needed. See which models are online and their live latency. For debates, recommendations, and history you need an API key — free accounts include one at [console.debatetalk.ai/api-keys](https://console.debatetalk.ai/api-keys).
 
 ---
 
@@ -202,7 +202,7 @@ Then run `/reload-plugins` — the five DebateTalk tools are immediately availab
 |------|--------------|-------------|
 | `run_debate` | Yes | Run a structured multi-model debate (streaming) |
 | `get_model_status` | No | Real-time health and latency for all models |
-| `recommend_models` | No | Get the best model panel for your question |
+| `recommend_models` | Yes | Get the best model panel for your question |
 | `estimate_cost` | Yes | Estimate credit cost before running |
 | `get_history` | Yes | List your past debates |
 
