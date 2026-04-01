@@ -12,7 +12,7 @@ DebateTalk makes multiple AI models argue a question independently, challenge ea
 
 ## Demo
 
-> Video walkthrough coming soon
+<div style="position: relative; padding-bottom: 62.60869565217391%; height: 0;"><iframe src="https://www.loom.com/embed/1c221974cba04bfc9dc9600cccc2e81e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ---
 
